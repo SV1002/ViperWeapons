@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>e0b99bf4-2c63-48d6-b08e-d17f85358c89</Guid>
+    <Name>ViperWeapons</Name>
+    <Description>Description of My XCOM 2 Mod.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>ViperWeapons</AssemblyName>
+    <RootNamespace>ViperWeapons</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+  <ItemGroup>
+    <Content Include="Config\XComAVData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComViperMAWConfig.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims_Akimbo_1.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims_Akimbo_2.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims_Akimbo_3.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims_Akimbo_4.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims_Civilian.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Ability Animations\Viper_MAWAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\FX_Viper_MAW.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Perk Contents\Perk_Boa_TonguePull.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Perk Contents\Perk_Elite_TonguePull.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Perk Contents\Perk_Prime_TonguePull.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Perk Contents\Perk_Viper_ArmoredPsi.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Pawn_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sword\Viper_SwordAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Step And Fire\Viper_StepAndFireAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Viper_CivilianPawns.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Viper_SocketsPawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\WP_Viper_MAW.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2Ability_MAWImplant.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2Ability_ModdedViperPullAndBinds.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2Condition_UnitTemplateCheck.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2Condition_ViperHasAbility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2Item_MAW.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2StrategyElement_MAWSlot.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2StrategyElement_MAWTechs.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\XGCharacterGenerator_ViperVIP.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="Config\" />
+    <Folder Include="Config\Animation Configs\" />
+    <Folder Include="Config\Animation Configs\Resistance Firearms Compatibility\" />
+    <Folder Include="Config\Cosmetics\" />
+    <Folder Include="Config\Cosmetics\Base\" />
+    <Folder Include="Config\Cosmetics\Chimera Squad\" />
+    <Folder Include="Config\Cosmetics\Civilian\" />
+    <Folder Include="Config\Cosmetics\DLC\" />
+    <Folder Include="Config\Cosmetics\Faction\" />
+    <Folder Include="Config\Cosmetics\Faction Arm Decos" />
+    <Folder Include="Config\Cosmetics\Torque\" />
+    <Folder Include="Content\" />
+    <Folder Include="Content\Akimbo Animations\" />
+    <Folder Include="Content\Cosmetics\" />
+    <Folder Include="Content\Base Animations" />
+    <Folder Include="Content\Armory Animations" />
+    <Folder Include="Content\Ability Animations" />
+    <Folder Include="Content\Perk Contents\" />
+    <Folder Include="Content\Primary Animations\" />
+    <Folder Include="Content\Secondary Animations\" />
+    <Folder Include="Content\Secondary Animations\Arc Thrower" />
+    <Folder Include="Content\Secondary Animations\Holo Targeter" />
+    <Folder Include="Content\Secondary Animations\Grenade Launcher" />
+    <Folder Include="Content\Secondary Animations\Combat Knife" />
+    <Folder Include="Content\Secondary Animations\Knife" />
+    <Folder Include="Content\Secondary Animations\Axe" />
+    <Folder Include="Content\Secondary Animations\Gauntlets" />
+    <Folder Include="Content\Secondary Animations\Rocket Launcher" />
+    <Folder Include="Content\Secondary Animations\Wrist Blade" />
+    <Folder Include="Content\Secondary Animations\Sword" />
+    <Folder Include="Content\Secondary Animations\Psionic" />
+    <Folder Include="Content\Secondary Animations\Psi Amp" />
+    <Folder Include="Content\Secondary Animations\Sawed Off" />
+    <Folder Include="Content\Secondary Animations\Pistol" />
+    <Folder Include="Content\Shared Animations\" />
+    <Folder Include="Content\Shared Animations\Fire And Melee" />
+    <Folder Include="Content\Shared Animations\Pull And Bind" />
+    <Folder Include="Content\Shared Animations\Step And Fire" />
+    <Folder Include="Content\Utility Animations\" />
+    <Folder Include="Content\Utility Animations\Grenade" />
+    <Folder Include="Content\Utility Animations\Medkit" />
+    <Folder Include="Content\Utility Animations\Heavy" />
+    <Folder Include="Localization\" />
+    <Folder Include="Localization\Cosmetics\" />
+    <Folder Include="Localization\Cosmetics\Base\" />
+    <Folder Include="Localization\Cosmetics\Chimera Squad\" />
+    <Folder Include="Localization\Cosmetics\Civilian\" />
+    <Folder Include="Localization\Cosmetics\DLC\" />
+    <Folder Include="Localization\Cosmetics\Faction\" />
+    <Folder Include="Localization\Cosmetics\Faction Arm Decos" />
+    <Folder Include="Localization\Cosmetics\Torque\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\ViperWeapons\" />
+    <Folder Include="Src\ViperWeapons\Classes\" />
+    <Content Include="Config\Cosmetics\Faction Arm Decos\XComContent.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComMissions.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Akimbo Animations\Viper_AkimboAnims_Checkmate.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Akimbo Animations\Viper_AkimboAnims_DualShot.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Akimbo Animations\Viper_AkimboAnims_Melee.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Akimbo Animations\Viper_AkimboAnims_SingleShot.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Armory Animations\Viper_HQAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Armory Animations\Viper_HQAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Armory Animations\Viper_HQAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Armory Animations\Viper_HQAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_Akimbo_1.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_Akimbo_2.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_Akimbo_3.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_Akimbo_4.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_Civilian.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Base Animations\Viper_BaseAnims_ViperKing.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Cosmetics\InvisibleBodyParts.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Cosmetics\Viper_FactionArmDecoCosmetics.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Perk Contents\Perk_Viper_TonguePull_Torque.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Perk Contents\Perk_Viper_TonguePull_Torque_Ally.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_BoltCasterAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_CannonAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_DMRAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_LMGAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_RifleAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_ShotgunAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_SMGAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Primary Animations\Viper_SniperAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Arc Thrower\Viper_ArcthrowerAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Arc Thrower\Viper_ArcthrowerAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Arc Thrower\Viper_ArcthrowerAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Arc Thrower\Viper_ArcthrowerAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Axe\Viper_AxeAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Axe\Viper_AxeAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Axe\Viper_AxeAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Axe\Viper_AxeAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims_AkimboCounter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims_Counter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims_PrimaryPistolCounter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Combat Knife\Viper_LWKnifeAnims_UnarmedCounter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Gauntlets\Viper_GauntletAnims_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Gauntlets\Viper_GauntletAnims_Secondary_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Gauntlets\Viper_GauntletAnims_Secondary_Weapon.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Gauntlets\Viper_GauntletAnims_Weapon.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Grenade Launcher\Viper_GrenadeLauncherAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Grenade Launcher\Viper_GrenadeLauncherAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Grenade Launcher\Viper_GrenadeLauncherAnims_Primary.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Grenade Launcher\Viper_GrenadeLauncherAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Grenade Launcher\Viper_GrenadeLauncherAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Holo Targeter\Viper_HolotargeterAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Holo Targeter\Viper_HolotargeterAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Holo Targeter\Viper_HolotargeterAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Holo Targeter\Viper_HolotargeterAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_AkimboCounter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_Akimbo_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_Akimbo_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_Akimbo_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_Counter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_PrimaryPistolCounter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_PrimaryPistol_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_PrimaryPistol_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_PrimaryPistol_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_UnarmedCounter.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_Unarmed_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_Unarmed_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Knife\Viper_KnifeAnims_Unarmed_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Pistol\Viper_PistolAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Pistol\Viper_PistolAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Pistol\Viper_PistolAnims_Primary.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Pistol\Viper_PistolAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims_Akimbo_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims_Pawn_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims_PrimaryPistol_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psi Amp\Viper_PsiAmpAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims_Akimbo_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims_Pawn_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims_PrimaryPistol_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Psionic\Viper_PsionAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Akimbo_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Akimbo_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Akimbo_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_PrimaryPistol_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_PrimaryPistol_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_PrimaryPistol_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_PrmaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Unarmed_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Unarmed_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_DRLAnims_Unarmed_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Pawn.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Pawn_Akimbo_1.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Pawn_Akimbo_2.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Pawn_Akimbo_3.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Pawn_Akimbo_4.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Pawn_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Rocket Launcher\Viper_RLAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sawed Off\Viper_SawedOffAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sawed Off\Viper_SawedOffAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sawed Off\Viper_SawedOffAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sawed Off\Viper_SawedOffAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sword\Viper_SwordAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sword\Viper_SwordAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Sword\Viper_SwordAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_Akimbo_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_Akimbo_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_Akimbo_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_PrimaryPistol_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_PrimaryPistol_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_PrimaryPistol_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_Unarmed_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_Unarmed_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Secondary Animations\Wrist Blade\Viper_RipjackAnims_Unarmed_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Fire And Melee\Viper_FireAndMeleeAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Fire And Melee\Viper_FireAndMeleeAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Fire And Melee\Viper_FireAndMeleeAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Pull And Bind\PullAndBindAnims_Human.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Pull And Bind\PullAndBindAnims_Muton.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Pull And Bind\PullAndBindAnims_Sectoid.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Step And Fire\Viper_StepAndFireAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Step And Fire\Viper_StepAndFireAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Step And Fire\Viper_StepAndFireAnims_Civilian.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Shared Animations\Step And Fire\Viper_StepAndFireAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims_Akimbo_1.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims_Akimbo_2.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims_Akimbo_3.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims_Akimbo_4.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Grenade\Viper_GrenadeAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Heavy\Viper_HeavyAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Heavy\Viper_HeavyAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Heavy\Viper_HeavyAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Heavy\Viper_HeavyAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Medkit\Viper_MedkitAnims.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Medkit\Viper_MedkitAnims_Akimbo.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Medkit\Viper_MedkitAnims_PrimaryPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Utility Animations\Medkit\Viper_MedkitAnims_Unarmed.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Viper_BasePawns.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\Cosmetics\Faction Arm Decos\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComAI.ini" />
+    <Content Include="Config\XComAlliesUnknown.ini" />
+    <Content Include="Config\XComClassData.ini" />
+    <Content Include="Config\XComContent.ini" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Config\XComGameBoard.ini" />
+    <Content Include="Config\XcomGameData.ini" />
+    <Content Include="Config\XComGameData_CharacterStats.ini" />
+    <Content Include="Config\XcomGameData_WeaponData.ini" />
+    <Content Include="Config\XcomViperAbilities.ini" />
+    <Content Include="Config\Animation Configs\XComCharacterAnimationBlacklists.ini" />
+    <Content Include="Config\Animation Configs\XComCharacterAnimations.ini" />
+    <Content Include="Config\Animation Configs\XComWeaponAnimations.ini" />
+    <Content Include="Config\Animation Configs\XComWeaponAnimations_Akimbo.ini" />
+    <Content Include="Config\Animation Configs\Resistance Firearms Compatibility\XComWeaponAnimations.ini" />
+    <Content Include="Config\Animation Configs\Resistance Firearms Compatibility\XComWeaponAnimations_Akimbo.ini" />
+    <Content Include="Config\Cosmetics\Base\XComContent.ini" />
+    <Content Include="Config\Cosmetics\Chimera Squad\XComContent.ini" />
+    <Content Include="Config\Cosmetics\Civilian\XComContent.ini" />
+    <Content Include="Config\Cosmetics\DLC\XComContent.ini" />
+    <Content Include="Config\Cosmetics\Faction\XComContent.ini" />
+    <Content Include="Config\Cosmetics\Torque\XComContent.ini" />
+    <Content Include="Content\UILibrary_Viper.upk" />
+    <Content Include="Content\Viper_BaseWeapons.upk" />
+    <Content Include="Content\Cosmetics\Viper_ArmorCosmetics.upk" />
+    <Content Include="Content\Cosmetics\Viper_BaseCosmetics.upk" />
+    <Content Include="Content\Cosmetics\Viper_ChopperCosmetics.upk" />
+    <Content Include="Content\Cosmetics\Viper_CivilianCosmetics.upk" />
+    <Content Include="Content\Cosmetics\Viper_MiscCosmetics.upk" />
+    <Content Include="Content\Cosmetics\Viper_TorqueCosmetics.upk" />
+    <Content Include="Content\Cosmetics\Viper_XcomCosmetics_DLC.upk" />
+    <Content Include="Content\Cosmetics\Viper_XcomCosmetics_Faction.upk" />
+    <Content Include="Content\Cosmetics\Viper_XcomCosmetics_Kevlar.upk" />
+    <Content Include="Content\Cosmetics\Viper_XcomCosmetics_Plated.upk" />
+    <Content Include="Content\Cosmetics\Viper_XcomCosmetics_Powered.upk" />
+    <Content Include="Content\Cosmetics\Viper_XcomCosmetics_Underlay.upk" />
+    <Content Include="Content\Perk Contents\Perk_Viper_KingTonguePull.upk" />
+    <Content Include="Content\Perk Contents\Perk_Viper_TonguePull.upk" />
+    <Content Include="Content\Perk Contents\Perk_Viper_TonguePull_Soldier.upk" />
+    <Content Include="Content\Perk Contents\Perk_Viper_TonguePull_Soldier_Ally.upk" />
+    <Content Include="Content\Primary Animations\Viper_PrimaryAnims_Viper.upk" />
+    <Content Include="Localization\ViperWeapons.int" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Localization\Cosmetics\Base\XComGame.int" />
+    <Content Include="Localization\Cosmetics\Chimera Squad\XComGame.int" />
+    <Content Include="Localization\Cosmetics\Civilian\XComGame.int" />
+    <Content Include="Localization\Cosmetics\DLC\XComGame.int" />
+    <Content Include="Localization\Cosmetics\Faction\XComGame.int" />
+    <Content Include="Localization\Cosmetics\Torque\XComGame.int" />
+    <Content Include="Src\ViperWeapons\Classes\UICustomize_ViperBody.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\UICustomize_ViperHead.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\UICustomize_ViperInfo.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\UICustomize_ViperMenu.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\UICustomize_ViperProps.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2Ability_ViperWeapons.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Ability_ViperWeapons_MAW.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Ability_ViperWeapons_ViperKing.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Ability_ViperWeapons_ViperNeonate.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Action_ViperWeaponsBind.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Action_ViperWeaponsBindEnd.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Action_ViperWeaponsBindEndAlt.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Action_ViperWeaponsGetOverHere.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Action_ViperWeaponsGetOverHereTarget.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2AIBehavior_ViperWeaponsCondition.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Character_Vipers.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Condition_ImmuneToCrush.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Condition_TargetIsHighCovered.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2Condition_ViperCondition.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\X2DownloadableContentInfo_ViperWeapons.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2DownloadableContentInfo_ViperWeapons_Akimbo.uc" />
+    <Content Include="Src\ViperWeapons\Classes\X2StrategyElement_ViperCountry.uc" />
+    <Content Include="Src\ViperWeapons\Classes\XComCharacterCustomization_Viper.uc" />
+    <Content Include="Src\ViperWeapons\Classes\XComGameState_ViperWeapons.uc" />
+    <Content Include="Src\ViperWeapons\Classes\XGCharacterGenerator_Viper.uc" />
+    <Content Include="Src\ViperWeapons\Classes\XGCharacterGenerator_ViperDarkVIP.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ViperWeapons\Classes\XGCharacterGenerator_ViperTemplar.uc" />
+  </ItemGroup>
+</Project>
